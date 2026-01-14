@@ -1,0 +1,176 @@
+% main.tex
+
+\documentclass[11pt]{article}
+
+% Import configuration
+\input{config/config}
+
+% --- Document Information (EDIT THESE) ---
+\newcommand{\docTitle}{Title of the report}
+\newcommand{\docSubtitle}{Subtitle of the report}
+\newcommand{\docAuthor}{Name Surname}
+\newcommand{\docInstitution}{Institution}
+\newcommand{\docVersion}{1.0}
+\newcommand{\docDate}{31/01/2026}
+
+% --- Bibliography ---
+\bibliographystyle{plain}
+
+\begin{document}
+
+% 1. Insert Title Page
+\input{config/title_page}
+
+% 2. Page 2: Revision Table
+\newpage
+\section*{Revision Table}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{|l|l|l|X|X|}
+        \hline
+        \textbf{Version} & \textbf{Date} & \textbf{Modified Page/Section} & \textbf{Author} & \textbf{Comments} \\
+        \hline
+        \docVersion & \docDate & All & \docAuthor &  \\
+        \hline
+        % Add new rows here as needed
+         &  &  &  &  \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\vspace{1cm}
+% Optional: Table of Contents could go here
+% \tableofcontents
+
+% 3. Page 3: Main Content
+\newpage
+
+\section{Introduction}
+
+This document demonstrates the TRACES template design with various elements including text, equations, and tables. The template is designed for the \textbf{\projectAcronym} project (\projectFullTitle). This template follows best practices for document preparation as described by Lamport \cite{lamport94}.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+\section{Mathematical Formulation}
+
+The fundamental equation describing the system can be expressed as:
+
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+For more complex systems, we consider the Schrödinger equation:
+
+\begin{equation}
+    i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t)
+\end{equation}
+
+where $\Psi(\mathbf{r},t)$ represents the wave function, $\hat{H}$ is the Hamiltonian operator, and $\hbar$ is the reduced Planck constant.
+
+\section{Figures and Visualizations}
+
+Figure \ref{fig:traces-logo} shows the TRACES project logo, which represents the collaborative nature of the research network.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{config/traces-logo.pdf}
+    \caption{TRACES project logo}
+    \label{fig:traces-logo}
+\end{figure}
+
+The visual identity of the project is carefully designed to reflect the interdisciplinary approach and European collaboration framework.
+
+\section{Results and Analysis}
+
+\subsection{Experimental Data}
+
+Table \ref{tab:results} presents the experimental results obtained from the study. The data shows a clear correlation between the variables studied.
+
+\begin{table}[h]
+    \centering
+    \caption{Experimental Results}
+    \label{tab:results}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \rowcolor{tracesBlue!20}
+        \textbf{Sample} & \textbf{Temperature (\textdegree C)} & \textbf{Pressure (bar)} & \textbf{Yield (\%)} \\
+        \hline
+        \rowcolor{tracesBlue!5}
+        A1 & 25 & 1.0 & 78.5 \\
+        \hline
+        \rowcolor{tracesBlue!5}
+        A2 & 50 & 1.5 & 82.3 \\
+        \hline
+        \rowcolor{tracesBlue!5}
+        A3 & 75 & 2.0 & 91.7 \\
+        \hline
+        \rowcolor{tracesBlue!5}
+        A4 & 100 & 2.5 & 95.2 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Statistical Analysis}
+
+The mean value $\mu$ and standard deviation $\sigma$ were calculated using:
+
+\begin{equation}
+    \mu = \frac{1}{n}\sum_{i=1}^{n} x_i, \quad \sigma = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \mu)^2}
+\end{equation}
+
+\section{Conclusions}
+
+This template provides a professional layout for TRACES project documents. The design includes:
+
+\begin{itemize}
+    \item Custom header and footer with EU and TRACES logos
+    \item Styled sections with TRACES blue color
+    \item Support for tables, equations, and figures
+    \item Automatic page numbering
+    \item Professional title page with project information
+\end{itemize}
+
+The template can be easily customized by modifying the document variables at the beginning of the main.tex file.
+
+\subsection{Key Features}
+
+The main advantages of this template are:
+
+\begin{enumerate}
+    \item Consistent branding with TRACES visual identity
+    \item Professional presentation suitable for EU reporting
+    \item Easy customization through document variables
+    \item Comprehensive support for scientific content
+\end{enumerate}
+
+Further details on document preparation and typesetting can be found in the works of Knuth \cite{knuth74,knuth92} and other LaTeX resources \cite{kottwitz2015latex}.
+
+\section{References}
+
+This section contains the bibliographic references used throughout the document. For more information on bibliography management, see \cite{bibtex}. Graphics in this document were created using TikZ \cite{tikz}.
+
+\bibliography{references}
+
+\appendix
+
+\section{Additional Information}
+
+This appendix contains supplementary material that supports the main content of the document.
+
+\subsection{Technical Details}
+
+Additional technical specifications and implementation details can be included here. The appendix sections maintain the same TRACES blue styling as the main sections.
+
+\begin{itemize}
+    \item Appendix content follows the same formatting rules
+    \item Tables and figures can be included
+    \item Equations are numbered continuously
+\end{itemize}
+
+\subsection{Data Tables}
+
+Supplementary data tables and extended results can be placed in this section.
+
+\end{document}

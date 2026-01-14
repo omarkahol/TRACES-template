@@ -1,0 +1,55 @@
+% title_page.tex
+
+\begin{titlepage}
+    \thispagestyle{fancy}
+    \centering
+    
+    % --- TRACES Logo ---
+    \includegraphics[width=0.8\textwidth]{config/traces-logo.pdf} 
+    
+    \vspace{0.5cm}
+    
+    {\Large \textcolor{tracesBlue}{\textbf{TRAining the next generation of iCE researchers}}}
+    
+    \vspace{2cm}
+    
+    % --- Project Info Table ---
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        \rowcolor{tracesBlue!10}
+        \textbf{Grant Agreement No.} & \grantNumber \\
+        \hline
+        \rowcolor{tracesBlue!10}
+        \textbf{Project Acronym} & \projectAcronym \\
+        \hline
+        \rowcolor{tracesBlue!10}
+        \textbf{Project full title} & \projectFullTitle \\
+        \hline
+        \rowcolor{tracesBlue!10}
+        \textbf{Project website} & \href{https://\projectWebsite}{\projectWebsite} \\
+        \hline
+        \rowcolor{tracesBlue!10}
+        \textbf{Start of the Project} & \projectStartDate \\
+        \hline
+    \end{tabularx}
+    
+    \vspace{3cm}
+    
+    % --- Document Title ---
+    {\huge \textbf{\textcolor{tracesBlue}{\docTitle}} \par}
+    
+    \vspace{0.5cm}
+    
+    {\Large \textcolor{tracesBlue}{\docSubtitle} \par}
+    
+    \vspace{2cm}
+    
+    % --- Author Info ---
+    \textbf{Author(s):} \docAuthor \\
+    \textbf{Institution:} \docInstitution
+    
+    \vfill
+    
+\end{titlepage}
+\setcounter{page}{2} % Start page numbering from 2 after title page
