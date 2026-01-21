@@ -7,15 +7,18 @@ PROJ = main
 LC = latexmk
 AUXSDIR = .build
 OPT = -halt-on-error
-ARGS = -pdfxe -outdir=$(AUXSDIR)  -pdfxelatex="xelatex $(OPT)" -use-make -bibtex
+ARGS = -pdfxe -outdir=$(AUXSDIR)  -pdfxelatex="xelatex $(OPT)" -bibtex
 
 all: $(PROJ).pdf
 
-$(PROJ).pdf : $(PROJ).tex 
-	$(LC) $(ARGS)
-	mv .build/${PROJ}.pdf ./
+$(PROJ).pdf: FORCE
+	$(LC) $(ARGS) $(PROJ).tex
+	cp $(AUXSDIR)/$(PROJ).pdf $@
 
 clean:
 	rm -rf $(AUXSDIR)
+	rm -f $(PROJ).pdf
 
-.PHONY: all clean
+FORCE:
+
+.PHONY: all clean FORCE
