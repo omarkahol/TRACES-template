@@ -30,6 +30,7 @@
 
 # PDF files
 *.pdf
+!main.pdf
 
 # OS generated files
 .DS_Store
