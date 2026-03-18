@@ -117,7 +117,7 @@ Simply add your content after the revision table in `main.tex`. The template sup
 - **Tables**: Use `table` and `tabular` environments (see examples in template)
 - **Figures**: Use `figure` environment with `\includegraphics`
 - **Lists**: Both `itemize` and `enumerate` environments with TRACES styling
-- **Citations**: Use `\cite{}` command (references defined in `references.bib`)
+- **Citations**: Use `\cite{}`, `\citet{}`, and `\citep{}` commands (references defined in `references.bib`)
 
 ### Bibliography
 
@@ -127,10 +127,10 @@ Add your references to `references.bib` in BibTeX format, then cite them using:
 \cite{reference_key}
 ```
 
-The bibliography style is set to `plain` but can be changed in `main.tex`:
+The bibliography style is set to `plainnat` but can be changed in `main.tex`:
 
 ```latex
-\bibliographystyle{plain}  % Change to alpha, abbrv, etc.
+\bibliographystyle{plainnat}  % natbib-compatible style
 ```
 
 ## Building Your Document

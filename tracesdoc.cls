@@ -89,7 +89,9 @@
 \RequirePackage{caption}
 \RequirePackage{enumitem}
 \RequirePackage{amsmath}
+\RequirePackage{amssymb}
 \RequirePackage{tikz}
+\RequirePackage{natbib}
 
 % Hyperref should be loaded late
 \RequirePackage{hyperref}
